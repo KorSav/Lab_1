@@ -71,7 +71,7 @@ void file_fill(char* fileName, char* rword_buf) {
 
 //допис у файл
 void file_append(string fileName) {
-	//для закінчення допису вводиться \0
+	//для закінчення допису вводиться \0 
 	char ch;
 	bool slash = false;
 	ofstream file(fileName+".txt", ios_base::app);
@@ -206,7 +206,7 @@ void file_change(string fileName, string& row) {
 void file_change(char* fileName, char* row) {
 	int ierase = strlen(fileName);
 	int lnum = 1;
-	FILE* newFile, * curFile;
+	FILE *newFile, *curFile;
 	newFile = fopen("temporary_file.tmp", "w");
 	strcat(fileName, ".txt");
 	curFile = fopen(fileName, "r");
