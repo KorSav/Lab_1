@@ -32,8 +32,10 @@ void remove_longest_word(string& str) {
 	    imax = 0, //індекс початку найдовшого слова
 	    icur = 0; //індекс початку поточного слова
 	for (int i = 0; str[i]; i++) {
-		if (str[i] != '.' && str[i] != ' ')
-			if (lcur++ == 0) icur = i;
+		if (str[i] != '.' && str[i] != ' '){
+			if (lcur == 0) icur = i;
+			lcur++;
+		}
 		else {
 			if (lcur > lmax) {
 				lmax = lcur; imax = icur;
@@ -53,8 +55,10 @@ void remove_longest_word(char* str) {
 	    imax = 0, //індекс початку найдовшого слова
 	    icur = 0; //індекс початку поточного слова
 	for (int i = 0; str[i]; i++) {
-		if (str[i] != '.' && str[i] != ' ')
-			if (lcur++ == 0) icur = i;
+		if (str[i] != '.' && str[i] != ' '){
+			if (lcur == 0) icur = i;
+			lcur++;
+		}
 		else {
 			if (lcur > lmax) {
 				lmax = lcur; imax = icur;
